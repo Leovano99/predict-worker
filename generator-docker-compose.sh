@@ -11,6 +11,8 @@ version: "3.9"
 
 x-worker-common: &worker-common
   image: predict-worker:latest
+  volumes:
+    - .:/app
   stdin_open: true
   tty: true
   restart: unless-stopped
